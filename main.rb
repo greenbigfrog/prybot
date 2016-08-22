@@ -16,7 +16,7 @@ require 'dotenv'
 Dotenv.load
 
 require 'discordrb'
-bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], application_id: ENV['APPID'], prefix: '!', advanced_functionality: false, debug: true #, log_mode: :debug
+bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], application_id: ENV['APPID'], prefix: '!', advanced_functionality: false, help_command: false, debug: true #, log_mode: :debug
 
 bot.ready do
   binding.pry
