@@ -25,8 +25,3 @@ end
 bot.run :async
 bot.game = 'private'
 bot.sync
-
-at_exit {
-  $logger.info('This Bot crashed or got closed')
-  $logger.close
-}
