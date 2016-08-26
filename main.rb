@@ -5,12 +5,7 @@ end
 
 # require 'bundler/setup'
 
-# Got pry for always required for easy use
 require 'pry'
-
-# Require all base requirements
-require 'rubygems'
-require 'net/http'
 
 require 'dotenv'
 Dotenv.load
