@@ -1,15 +1,19 @@
 
-# require 'bundler/setup'
 require 'pry'
 
 require 'dotenv'
 Dotenv.load
 
 require 'discordrb'
-bot = Discordrb::Bot.new token: ENV['TOKEN'], application_id: ENV['APPID'] #, log_mode: :debug
+
+token = ENV['TOKEN']
+client_id = ENV['CLIENTID']
+
+raise "You need to both set TOKEN and CLIENTID as enviroment variables, or specify them in a file called .env" unless token && client_id
+
+bot = Discordrb::Bot.new token: token, client_id: client_id
 
 bot.ready do
-  bot.game = 'private'
   binding.pry
 end
 
